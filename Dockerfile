@@ -27,3 +27,7 @@ RUN apt-get update \
     && apt-get install --assume-yes libpng-dev zlib1g
 
 COPY --from=builder /usr/local/bin/wla-* /usr/local/bin/wlalink /usr/local/bin/wlab /usr/local/bin/
+
+COPY entrypoint.sh /entrypoint.sh
+
+ENTRYPOINT ["/entrypoint.sh"]
