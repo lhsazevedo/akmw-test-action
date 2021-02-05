@@ -1,0 +1,6 @@
+# action.yml
+name: 'AKMW Build and Test'
+description: 'Github action to build and test AKMW ROM'
+runs:
+  using: 'docker'
+  image: 'Dockerfile'
